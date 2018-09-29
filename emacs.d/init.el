@@ -42,11 +42,14 @@ re-downloaded in order to locate PACKAGE."
 (setq make-backup-files nil)
 (setq delete-auto-save-files t)
 
+;; delete -> bs
+(normal-erase-is-backspace-mode 0)
+
 ;; when saving
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 
-;; remove menubar 
+;; remove menubar
 (menu-bar-mode -1)
 
 ;; mode-line (column and line numbers)
@@ -103,6 +106,8 @@ re-downloaded in order to locate PACKAGE."
 ;; major mode (adding suffixes)
 (add-to-list 'auto-mode-alist (cons  "\\.\\(cu\\)\\'" 'c++-mode))
 (add-to-list 'auto-mode-alist (cons  "\\.\\(hj\\)\\'" 'java-mode))
+(add-to-list 'auto-mode-alist (cons  "dotzshrc" 'shell-script-mode))
+(add-to-list 'auto-mode-alist (cons  "dotzshenv" 'shell-script-mode))
 
 ;; major mode (regiter new major modes)
 (when (require 'chpl-mode nil t)
@@ -117,4 +122,3 @@ re-downloaded in order to locate PACKAGE."
 
 (add-hook 'c-mode-hook 'my-c-c++-mode-init)
 (add-hook 'c++-mode-hook 'my-c-c++-mode-init)
-
