@@ -7,3 +7,6 @@
 !elisp/download.sh
 # vim
 !.vimrc
+# zsh
+!.zshrc
+!.zshenv
