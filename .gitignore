@@ -1,5 +1,9 @@
 *
+# emacs
 !init.el
+!custom.el
 !.gitignore
 !elisp
 !elisp/download.sh
+# vim
+!.vimrc
