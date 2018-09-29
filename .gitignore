@@ -1,12 +1,12 @@
 *
-# emacs
-!init.el
-!custom.el
 !.gitignore
-!elisp
-!elisp/download.sh
+# emacs
+!emacs.d
+!emacs.d/init.el
+!emacs.d/custom.el
+!emacs.d/elisp/download.sh
 # vim
-!.vimrc
+!dotvimrc
 # zsh
-!.zshrc
-!.zshenv
+!dotzshrc
+!dotzshenv
