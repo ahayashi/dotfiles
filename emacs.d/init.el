@@ -74,6 +74,7 @@ re-downloaded in order to locate PACKAGE."
 (setq scroll-conservatively 1)
 
 ;; global-set-key
+(global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\C-x\C-j" 'goto-line)
 
 ;; show paren
