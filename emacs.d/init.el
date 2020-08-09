@@ -2,10 +2,6 @@
 
 ;; (setq debug-on-error t)
 
-;; load-path
-(setq load-path (cons (expand-file-name "~/.emacs.d/elisp") load-path))
-(setq load-path (cons (expand-file-name "~/.emacs.d/elisp/emacs-scala-mode") load-path))
-
 ;; auto generated .el
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
@@ -19,10 +15,10 @@
 (when (require 'use-package nil t)
   ;; major-modes
   (use-package cuda-mode :mode ("\\.cu\\'" . cuda-mode))
-  (use-package chpl-mode :mode ("\\.chpl\\'" . chpl-mode))
+  (use-package chpl-mode :load-path ("elisp") :mode ("\\.chpl\\'" . chpl-mode))
   (use-package js2-mode :mode ("\\.js\\'" . js2-mode))
-  (use-package llvm-mode :mode ("\\.ll\\'" . llvm-mode))
-  (use-package scala-mode :mode ("\\.scala\\'" . scala-mode))
+  (use-package llvm-mode :load-path ("elisp") :mode ("\\.ll\\'" . llvm-mode))
+  (use-package scala-mode :load-path ("elisp/emacs-scala-mode") :mode ("\\.scala\\'" . scala-mode))
   (use-package shell-script-mode :mode ("dotzshrc" . shell-script-mode) ("dotzshenv" . shell-script-mode))
   (use-package rust-mode :mode ("\\.rs\\'" . rust-mode))
   ;; mode-line (filename)
