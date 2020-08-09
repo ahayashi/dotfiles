@@ -31,6 +31,13 @@
 ;; delete -> bs
 (normal-erase-is-backspace-mode 0)
 
+;; global-set-key
+(global-set-key "\C-h" 'delete-backward-char)
+(global-set-key "\C-x\C-j" 'goto-line)
+
+;; indent / spacing
+(setq-default tab-width 4 indent-tabs-mode nil c-basic-offset 4)
+
 ;; do not generate backup files
 (setq make-backup-files nil)
 (setq delete-auto-save-files t)
@@ -57,17 +64,10 @@
 ;; scroll
 (setq scroll-conservatively 1)
 
-;; global-set-key
-(global-set-key "\C-h" 'delete-backward-char)
-(global-set-key "\C-x\C-j" 'goto-line)
-
 ;; show paren
 (show-paren-mode t)
 (set-face-foreground 'show-paren-match "black")
 (set-face-background 'show-paren-match "grey66")
-
-;; indent / spacing
-(setq-default tab-width 4 indent-tabs-mode nil c-basic-offset 4)
 
 ;; color (font-lock)
 (setq font-lock-support-mode 'jit-lock-mode)
