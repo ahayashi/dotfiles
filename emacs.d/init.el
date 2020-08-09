@@ -41,6 +41,7 @@
               tab-width 4
               indent-tabs-mode nil)
 (setq-default show-trailing-whitespace t)
+(setq c-offsets-alist '((inlambda . 0))) ; experimental
 
 ;; do not generate backup files
 (setq make-backup-files nil)
