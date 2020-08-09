@@ -36,9 +36,9 @@
 (global-set-key "\C-x\C-j" 'goto-line)
 
 ;; indent / spacing
-(setq-default tab-width 4)
-(setq-default indent-tabs-mode nil)
-(setq-default c-basic-offset 4)
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil)
 (setq-default show-trailing-whitespace t)
 
 ;; do not generate backup files
