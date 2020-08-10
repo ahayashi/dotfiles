@@ -23,10 +23,11 @@ zstyle ':vcs_info:git*' formats " %b"
 # Prompt
 #
 setopt prompt_subst
-#PROMPT='%{[01;34m%}%n@%m %#%{[m%} '
-PROMPT='%K{21}%F{110}%n@%m%(1j.[%j].) %(!.#.'$'\u21e5'') %f%k '
-#PROMPT='%B%K{111}%F{195}%n@%m%{[m%}%F{111}'$'\u25b6'' %{[m%}'
-#RPROMPT='%{[01;34m%}[%~]%{[m%}'
+PSYM='>>'
+if [[ $LANG = *UTF-8 ]] then
+   PSYM=''$'\u21e5'''
+fi
+PROMPT='%K{21}%F{110}%n@%m%(1j.[%j].) %(!.#.$PSYM) %f%k '
 RPROMPT='%K{21}%F{110}[%~]${vcs_info_msg_0_}%f%k'
 
 #
