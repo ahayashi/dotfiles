@@ -11,3 +11,5 @@
 # zsh
 !dotzshrc
 !dotzshenv
+# install script
+!install.sh
